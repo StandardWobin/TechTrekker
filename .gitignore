@@ -1,7 +1,11 @@
 
 #############################################
 # BACKEND ###################################
-
+backend/.gradle
+backend/build/
+backend/!gradle/wrapper/gradle-wrapper.jar
+backend/!**/src/main/**/build/
+backend/!**/src/test/**/build/
 
 #############################################
 # FRONTEND ##################################
@@ -36,3 +40,12 @@ frontend/*.suo
 frontend/*.ntvs*
 frontend/*.njsproj
 frontend/*.sln
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
