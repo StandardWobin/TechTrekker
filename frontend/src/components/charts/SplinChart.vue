@@ -46,21 +46,21 @@ export default defineComponent({
           },
         },
 
-         responsive: [
+        responsive: [
           {
             breakpoint: 1000,
             options: {
               chart: {
-                  width: 260,
+                width: 260,
               },
               plotOptions: {
                 bar: {
-                  horizontal: true,                },
+                  horizontal: true,
+                },
               },
             },
           },
         ],
-
       },
       series: [
         {

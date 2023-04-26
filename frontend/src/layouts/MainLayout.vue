@@ -3,12 +3,12 @@
     <q-header elevated>
       <q-toolbar>
         <q-toolbar-title>
-
-            <q-btn @click="$router.replace('/')" flat style="color: #FFFFFF" label="TechTrekker (Arbeitstitel)" />
-
-
-
-
+          <q-btn
+            @click="$router.replace('/')"
+            flat
+            style="color: #ffffff"
+            label="TechTrekker (Arbeitstitel)"
+          />
         </q-toolbar-title>
       </q-toolbar>
     </q-header>
@@ -24,7 +24,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 import FooterContent from 'components/FooterContent.vue';
 
 export default defineComponent({

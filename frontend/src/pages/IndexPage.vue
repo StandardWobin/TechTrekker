@@ -40,9 +40,9 @@
 
 <script lang="ts">
 import { Todo, Meta } from 'components/models';
-import BarChart from 'components/BarChart.vue';
-import PieChart from 'components/PieChart.vue';
-import SplinChart from 'components/SplinChart.vue';
+import BarChart from 'components/charts/BarChart.vue';
+import PieChart from 'components/charts/PieChart.vue';
+import SplinChart from 'components/charts/SplinChart.vue';
 
 import { defineComponent, ref } from 'vue';
 

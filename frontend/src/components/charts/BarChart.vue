@@ -1,10 +1,9 @@
 <template>
   <div>
     <apexchart
-      width="700"
       height="200"
-      type="pie"
-      style="position: relative; left: 4vw"
+      type="bar"
+      style="position: relative; left: 4vw; max-width: 760px"
       :options="chartOptions"
       :series="series"
     ></apexchart>
@@ -15,30 +14,38 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'PieChart',
+  name: 'BarChart',
   data() {
     return {
       chartOptions: {
         chart: {
           id: 'vuechart-example',
         },
-        labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
-         responsive: [
+        xaxis: {
+          categories: ['Vuejs', 'Angular', 1993, 1994, 1995, 1996, 1997, 1998],
+        },
+        responsive: [
           {
             breakpoint: 1000,
             options: {
               chart: {
-                  width: 300,
+                width: 250,
               },
               plotOptions: {
                 bar: {
-                  horizontal: true,                },
+                  horizontal: true,
+                },
               },
             },
           },
         ],
       },
-      series: [44, 55, 13, 43, 22],
+      series: [
+        {
+          name: 'series-1',
+          data: [30, 40, 35, 50, 49, 60, 70, 91],
+        },
+      ],
     };
   },
 });
