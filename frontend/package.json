@@ -1,9 +1,9 @@
 {
-  "name": "quasar-project",
+  "name": "Tech-Trekker",
   "version": "0.0.1",
-  "description": "A Quasar Project",
-  "productName": "Quasar App",
-  "author": "StandardWobin <r.haensse@gmx.net>",
+  "description": "TODOTODOTODOTODO",
+  "productName": "TechTrekker",
+  "author": "TODO",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue ./",

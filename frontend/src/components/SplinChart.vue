@@ -45,6 +45,22 @@ export default defineComponent({
             format: 'dd/MM/yy HH:mm',
           },
         },
+
+         responsive: [
+          {
+            breakpoint: 1000,
+            options: {
+              chart: {
+                  width: 260,
+              },
+              plotOptions: {
+                bar: {
+                  horizontal: true,                },
+              },
+            },
+          },
+        ],
+
       },
       series: [
         {

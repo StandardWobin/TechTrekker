@@ -23,6 +23,20 @@ export default defineComponent({
           id: 'vuechart-example',
         },
         labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
+         responsive: [
+          {
+            breakpoint: 1000,
+            options: {
+              chart: {
+                  width: 300,
+              },
+              plotOptions: {
+                bar: {
+                  horizontal: true,                },
+              },
+            },
+          },
+        ],
       },
       series: [44, 55, 13, 43, 22],
     };

@@ -1,10 +1,11 @@
 <template>
   <div>
     <apexchart
-      width="700"
       height="200"
       type="bar"
-      style="position: relative; left: 4vw"
+
+
+      style="position: relative; left: 4vw; max-width: 760px"
       :options="chartOptions"
       :series="series"
     ></apexchart>
@@ -25,6 +26,20 @@ export default defineComponent({
         xaxis: {
           categories: ['Vuejs', 'Angular', 1993, 1994, 1995, 1996, 1997, 1998],
         },
+        responsive: [
+          {
+            breakpoint: 1000,
+            options: {
+              chart: {
+                  width: 250,
+              },
+              plotOptions: {
+                bar: {
+                  horizontal: true,                },
+              },
+            },
+          },
+        ],
       },
       series: [
         {
