@@ -1,4 +1,20 @@
 Techstack fürs frontend
+
+# requirements
+1. node => 18
+2. npm => 9
+
+# Stack
+pinia
+router
+quasar
+i18n
+axious
+npm
+vite
+vitest
+
+
 1. [Quasrar](https://quasar.dev/) mit Vue.js **3**
     1. vue-router
     2. SSR
