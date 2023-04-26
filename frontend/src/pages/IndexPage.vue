@@ -15,15 +15,14 @@
             />
           </div>
         </q-card-section>
-
         <pie-chart v-if="slide == 'Pie'"></pie-chart>
         <bar-chart v-else></bar-chart>
       </q-card>
+
       <q-card class="my-card" bordered>
         <q-card-section>
           <div class="text-h6">Time Series Data Comparison</div>
         </q-card-section>
-
         <splin-chart></splin-chart>
       </q-card>
     </div>
@@ -33,6 +32,7 @@
         <q-card-section>
           <div class="text-h6">Ich bins 1 Karte</div>
         </q-card-section>
+        <lea-flet-end-point></lea-flet-end-point>
       </q-card>
     </div>
   </q-page>
@@ -44,11 +44,13 @@ import BarChart from 'components/charts/BarChart.vue';
 import PieChart from 'components/charts/PieChart.vue';
 import SplinChart from 'components/charts/SplinChart.vue';
 
+import LeaFletEndPoint from 'components/map/LeaFletEndPoint.vue';
+
 import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
   name: 'IndexPage',
-  components: { BarChart, PieChart, SplinChart },
+  components: { BarChart, PieChart, SplinChart, LeaFletEndPoint },
 
   data() {
     return {};
