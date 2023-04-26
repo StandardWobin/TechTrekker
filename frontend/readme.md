@@ -1,24 +1,41 @@
-Techstack fürs frontend
+# Quasar App (quasar-project)
 
-# requirements
-1. node => 18
-2. npm => 9
+A Quasar Project
 
-# Stack
-pinia
-router
-quasar
-i18n
-axious
-npm
-vite
-vitest
+## Install the dependencies
+```bash
+yarn
+# or
+npm install
+```
+
+### Start the app in development mode (hot-code reloading, error reporting, etc.)
+```bash
+quasar dev
+```
 
 
-1. [Quasrar](https://quasar.dev/) mit Vue.js **3**
-    1. vue-router
-    2. SSR
-    3. UI Framework -> Das von Quasar (Tailwind.css)
-    4. Test Framework -> Vitest und Pupetteer
-    5. ModuleBungler -> Vite
-    6. Requester -> Axios
+### Lint the files
+```bash
+yarn lint
+# or
+npm run lint
+```
+
+
+### Format the files
+```bash
+yarn format
+# or
+npm run format
+```
+
+
+
+### Build the app for production
+```bash
+quasar build
+```
+
+### Customize the configuration
+See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
