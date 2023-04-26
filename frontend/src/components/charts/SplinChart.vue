@@ -16,6 +16,11 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'SplinChart',
+      props: {
+    colors: {
+      type: Array,
+      required: true,
+    },},
   data() {
     return {
       chartOptions: {
@@ -45,7 +50,13 @@ export default defineComponent({
             format: 'dd/MM/yy HH:mm',
           },
         },
+       colors: this.colors,
 
+        plotOptions: {
+          splin: {
+            distributed: true, // this line is mandatory
+          },
+        },
         responsive: [
           {
             breakpoint: 1000,
@@ -64,12 +75,20 @@ export default defineComponent({
       },
       series: [
         {
-          name: 'series1',
+          name: 'Vue',
           data: [31, 40, 28, 51, 42, 109, 100],
         },
         {
-          name: 'series2',
-          data: [11, 32, 45, 32, 34, 52, 41],
+          name: 'Angular',
+          data: [11, 32, 45, 32, 34, 52, 4],
+        },
+               {
+          name: 'React',
+          data: [11, 90, 5, 32, 11, 5, 2],
+        },
+               {
+          name: 'Bootstrap',
+          data: [11, 32, 13, 9, 34, 88, 18],
         },
       ],
     };

@@ -16,13 +16,28 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'PieChart',
+  props: {
+    colors: {
+      type: Array,
+      required: true,
+    },
+  },
+
   data() {
     return {
       chartOptions: {
         chart: {
           id: 'vuechart-example',
         },
-        labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
+
+        labels: ['Vue', 'Angular', 'React', 'Bootstrap'],
+        plotOptions: {
+          pie: {
+            distributed: true, // this line is mandatory
+          },
+        },
+        colors: this.colors,
+
         responsive: [
           {
             breakpoint: 1000,
@@ -39,7 +54,7 @@ export default defineComponent({
           },
         ],
       },
-      series: [44, 55, 13, 43, 22],
+      series: [44, 55, 13, 43],
     };
   },
 });

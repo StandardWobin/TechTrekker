@@ -1,11 +1,21 @@
 <template>
-  <div class="q-pa-xl" style="height: 70vh; width: 100%">
+  <div class="q-pa-xl" style="height: 60vh; width: 100%">
     <l-map
       ref="map"
       class="map"
       :useGlobalLeaflet="false"
       :center="center"
       :zoom="zoom"
+      @update:center="
+        (center) => {
+          this.center = center;
+        }
+      "
+      @update:zoom="
+        (zoom) => {
+          this.zoom = zoom;
+        }
+      "
     >
       <l-tile-layer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -37,8 +47,8 @@ export default defineComponent({
 
   data() {
     return {
-      zoom: 2,
-      center: [-20.38, 47.5],
+      zoom: 6,
+      center: [51.220515, 9.997559],
       geojson: {
         type: 'FeatureCollection',
         features: [

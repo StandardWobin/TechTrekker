@@ -15,14 +15,29 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'BarChart',
+  props: {
+    colors: {
+      type: Array,
+      required: true,
+    },
+  },
+
   data() {
     return {
       chartOptions: {
         chart: {
           id: 'vuechart-example',
         },
+
+        colors: this.colors,
+
+        plotOptions: {
+          bar: {
+            distributed: true, // this line is mandatory
+          },
+        },
         xaxis: {
-          categories: ['Vuejs', 'Angular', 1993, 1994, 1995, 1996, 1997, 1998],
+          categories: ['Vuejs', 'Angular', 'React', 'Bootstrap'],
         },
         responsive: [
           {
@@ -43,7 +58,7 @@ export default defineComponent({
       series: [
         {
           name: 'series-1',
-          data: [30, 40, 35, 50, 49, 60, 70, 91],
+          data: [30, 40, 35, 50],
         },
       ],
     };
