@@ -1,13 +1,12 @@
-val ktor_version: String by project
-val kotlin_version: String by project
-val logback_version: String by project
-val exposed_version : String by project
-val h2_version : String by project
-
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-    kotlin("jvm") version "1.8.21"
-    id("io.ktor.plugin") version "2.3.0"
-                id("org.jetbrains.kotlin.plugin.serialization") version "1.8.21"
+    application
+    alias(libs.plugins.kotlinJvm)
+    alias(libs.plugins.ktlint)
+    alias(libs.plugins.kotlinSerialization)
+    alias(libs.plugins.ktorPlugin)
+    alias(libs.plugins.versionUpdate)
+    alias(libs.plugins.catalogUpdate)
 }
 
 group = "com.nw"
@@ -24,23 +23,14 @@ repositories {
 }
 
 dependencies {
-    implementation("io.ktor:ktor-server-content-negotiation-jvm:$ktor_version")
-    implementation("io.ktor:ktor-server-core-jvm:$ktor_version")
-    implementation("io.ktor:ktor-serialization-jackson-jvm:$ktor_version")
-    implementation("io.ktor:ktor-serialization-kotlinx-json-jvm:$ktor_version")
-    implementation("org.jetbrains.exposed:exposed-core:$exposed_version")
-    implementation("org.jetbrains.exposed:exposed-jdbc:$exposed_version")
-    implementation("com.h2database:h2:$h2_version")
-    implementation("io.ktor:ktor-server-call-logging-jvm:$ktor_version")
-    //implementation("io.ktor:ktor-server-swagger:$ktor_version")
-    //implementation("io.ktor:ktor-server-openapi:$ktor_version")
-    implementation("io.ktor:ktor-server-cors-jvm:$ktor_version")
-    implementation("io.ktor:ktor-server-host-common-jvm:$ktor_version")
-    implementation("io.ktor:ktor-server-status-pages-jvm:$ktor_version")
-    implementation("io.ktor:ktor-server-sessions-jvm:$ktor_version")
-    implementation("io.ktor:ktor-server-auth-jvm:$ktor_version")
-    implementation("io.ktor:ktor-server-cio-jvm:$ktor_version")
-    implementation("ch.qos.logback:logback-classic:$logback_version")
-    testImplementation("io.ktor:ktor-server-tests-jvm:$ktor_version")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
+    implementation(libs.bundles.ktorServer)
+    implementation(libs.bundles.ktorClient)
+    implementation(libs.bundles.ktorSerialization)
+    implementation(libs.bundles.exposed)
+    implementation(libs.bundles.dbConnector)
+    implementation(libs.bundles.logging)
+    implementation(libs.bundles.swaggerAndOpenAPI)
+    implementation(libs.bundles.security)
+    implementation(libs.bundles.cookies)
+    implementation(libs.bundles.testing)
 }

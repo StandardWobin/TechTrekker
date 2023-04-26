@@ -12,11 +12,11 @@ import io.ktor.server.routing.routing
 fun Application.configureRouting() {
     install(StatusPages) {
         exception<Throwable> { call, cause ->
-            call.respondText(text = "500: $cause" , status = HttpStatusCode.InternalServerError)
+            call.respondText(text = "500: $cause", status = HttpStatusCode.InternalServerError)
         }
     }
     routing {
-        get("/") {
+        get("/api/v1/hello") {
             call.respondText("Hello World!")
         }
     }
