@@ -14,6 +14,10 @@ dies ist ein Arbeitstitel. Das Frontend ist eine Responsive Webapp die Jobdaten 
 
 
 ## Todo
+### Devops
+1. set up Docker file
+2. Enable Routing for Apache2
+
 ### Backend
 1. Entscheidung über Backend-Architektur im Bezug auf Crawler
 2. Integration von SSR und eigenen Server + evt. Crawler API
@@ -30,7 +34,7 @@ dies ist ein Arbeitstitel. Das Frontend ist eine Responsive Webapp die Jobdaten 
 1. Design erstellen
 2. Use semantic release with conventional commits? (https://github.com/semantic-release/semantic-release, https://www.conventionalcommits.org/en/v1.0.0/#specification)
 3. Session handling with which auth method? Prob JWT Oath2
-4. Admin page / access?
+4. Test Strategy
 
 ### Infrastructure
 1. DevOps: Docker / k8s?
