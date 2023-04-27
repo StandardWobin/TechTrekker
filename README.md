@@ -1,5 +1,5 @@
 # TechTrekker
-dies ist ein Arbeitstitel
+dies ist ein Arbeitstitel. Das Frontend ist eine Responsive Webapp die Jobdaten aus verschiedenen Lokalitäten anzeigt und Frameworks vergleicht
 
 ## Domainvorschläge
 1. www.techtrekker.io (frei, 3€/Monat)
@@ -29,7 +29,7 @@ dies ist ein Arbeitstitel
 ### Frontend 
 1. Design erstellen
 2. Use semantic release with conventional commits? (https://github.com/semantic-release/semantic-release, https://www.conventionalcommits.org/en/v1.0.0/#specification)
-3. Session handling with which auth method?
+3. Session handling with which auth method? Prob JWT Oath2
 4. Admin page / access?
 
 ### Infrastructure
@@ -42,9 +42,10 @@ dies ist ein Arbeitstitel
 
 ## Designideen
 1. https://cdnl.tblsft.com/sites/default/files/pages/ny_1.jpg *3D Map Design*
+2. 
 
 
-(c) 2032
+(c) 2023
 
 
 
