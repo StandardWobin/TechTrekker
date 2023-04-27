@@ -44,10 +44,6 @@ dies ist ein Arbeitstitel. Das Frontend ist eine Responsive Webapp die Jobdaten 
 5. Automatic releases (see semantic release)
 6. Set Env variables 
 
-## Designideen
-1. https://cdnl.tblsft.com/sites/default/files/pages/ny_1.jpg *3D Map Design*
-2. 
-
 
 (c) 2023
 
