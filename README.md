@@ -40,7 +40,7 @@ dies ist ein Arbeitstitel. Das Frontend ist eine Responsive Webapp die Jobdaten 
 1. DevOps: Docker / k8s?
 2. DevOps: CI / CD which pipelines? 
 3. Monitoring
-4. Where to host? (check https://fly.io)
+4. Where to host? (check https://fly.io - ionos, AWS lightsail?)
 5. Automatic releases (see semantic release)
 6. Set Env variables 
 
