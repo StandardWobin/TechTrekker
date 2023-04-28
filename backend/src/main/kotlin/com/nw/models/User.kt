@@ -1,4 +1,4 @@
-package com.nw.user.models
+package com.nw.models
 
 import java.time.LocalDateTime
 
