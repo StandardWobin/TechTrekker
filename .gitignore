@@ -50,3 +50,11 @@ frontend/*.sln
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+
+
+
+
+#############################################
+# FLUFF    ##################################
+fluff/Crawler/Indeed/node_modules
+fluff/Crawler/Indeed/screenshots

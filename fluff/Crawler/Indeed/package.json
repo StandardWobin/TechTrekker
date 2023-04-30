@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "puppeteer": "^19.11.1",
+    "random-useragent": "^0.5.0"
+  }
+}
