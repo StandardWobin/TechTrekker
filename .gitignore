@@ -61,3 +61,12 @@ fluff/Crawler/Indeed/screenshots
 
 fluff/Crawler/StepStone/node_modules
 fluff/Crawler/StepStone/screenshots
+
+
+
+
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+
+frontendAlternitve/

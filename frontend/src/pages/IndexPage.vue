@@ -3,9 +3,7 @@
     <q-chip
       @click="select[0] = !select[0]"
       :selected="select[0]"
-
       :style="'background:' + colors[0]"
-
       text-color="white"
     >
       Vue
@@ -52,7 +50,11 @@
             />
           </div>
         </q-card-section>
-        <pie-chart v-if="slide == 'Pie'" :select="select" :colors="colors"></pie-chart>
+        <pie-chart
+          v-if="slide == 'Pie'"
+          :select="select"
+          :colors="colors"
+        ></pie-chart>
         <bar-chart v-else :select="select" :colors="colors"></bar-chart>
       </q-card>
 
@@ -69,7 +71,20 @@
         <q-card-section>
           <div class="text-h6">Ich bins 1 Karte</div>
         </q-card-section>
-        <lea-flet-end-point :select="select" :colors="colors"></lea-flet-end-point>
+        <div class="row justify-center">
+          <q-btn-toggle
+            glossy
+            v-model="slideMap"
+            :options="[
+              { label: 'OpenSreet', value: 'OS' },
+              { label: 'SVG', value: 'SVG' },
+            ]"
+          />
+        </div>
+
+         <lea-flet-end-point v-if="slideMap==='OS'" :select="select" :colors="colors"></lea-flet-end-point>
+
+        <simple-map v-else></simple-map>
       </q-card>
     </div>
   </q-page>
@@ -82,11 +97,13 @@ import PieChart from 'components/charts/PieChart.vue';
 import SplinChart from 'components/charts/SplinChart.vue';
 
 import LeaFletEndPoint from 'components/map/LeaFletEndPoint.vue';
+import SimpleMap from 'components/map/SimpleMap.vue';
+
 import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
   name: 'IndexPage',
-  components: { BarChart, PieChart, SplinChart, LeaFletEndPoint },
+  components: { BarChart, PieChart, SplinChart, LeaFletEndPoint, SimpleMap },
 
   data() {
     return {
@@ -121,7 +138,7 @@ export default defineComponent({
     const meta = ref<Meta>({
       totalCount: 1200,
     });
-    return { todos, meta, slide: ref('Pie') };
+    return { todos, meta, slide: ref('Pie'), slideMap: ref('OS') };
   },
 });
 </script>
