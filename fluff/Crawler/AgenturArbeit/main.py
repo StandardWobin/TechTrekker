@@ -8,7 +8,6 @@
 #
 #       use it as 'python main.py'
 #
-import time
 import requests
 import json
 from deutschland import jobsuche
@@ -97,4 +96,3 @@ for targetWord in targetWords:
     print("Anzahl für ", targetWord)
     print(y["maxErgebnisse"])
     input()
-

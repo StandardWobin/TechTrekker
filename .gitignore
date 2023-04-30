@@ -58,3 +58,6 @@ out/
 # FLUFF    ##################################
 fluff/Crawler/Indeed/node_modules
 fluff/Crawler/Indeed/screenshots
+
+fluff/Crawler/StepStone/node_modules
+fluff/Crawler/StepStone/screenshots
