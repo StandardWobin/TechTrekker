@@ -8,10 +8,12 @@ mysqlConnectorVersion = "8.0.33"
 swaggerCodegenVersion = "1.0.39"
 versionCatalogUpdateVersion = "0.8.0"
 versionUpdateVersion = "0.46.0"
+sshVersion = "0.1.55"
 
 [libraries]
 exposedCore = { module = "org.jetbrains.exposed:exposed-core", version.ref = "exposedVersion" }
 exposedJDBC = { module = "org.jetbrains.exposed:exposed-jdbc", version.ref = "exposedVersion" }
+exposedKotlinDateTime = { module = "org.jetbrains.exposed:exposed-kotlin-datetime", version.ref = "exposedVersion" }
 kotlinTestJunit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlinVersion" }
 ktorClientCioJVM = { module = "io.ktor:ktor-client-cio-jvm", version.ref = "ktorVersion" }
 ktorClientContentNegotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktorVersion" }
@@ -35,6 +37,7 @@ ktorServerSwagger = { module = "io.ktor:ktor-server-swagger", version.ref = "kto
 ktorServerTestsJVM = { module = "io.ktor:ktor-server-tests-jvm", version.ref = "ktorVersion" }
 logbackClassic = { module = "ch.qos.logback:logback-classic", version.ref = "logbackVersion" }
 mysqlConnector = { module = "mysql:mysql-connector-java", version.ref = "mysqlConnectorVersion" }
+sshConnector = { module = "com.jcraft:jsch", version.ref = "sshVersion" }
 swaggerCodegenGenerators = { module = "io.swagger.codegen.v3:swagger-codegen-generators", version.ref = "swaggerCodegenVersion" }
 
 [bundles]
@@ -43,10 +46,12 @@ cookies = [
 ]
 dbConnector = [
     "mysqlConnector",
+    "sshConnector"
 ]
 exposed = [
     "exposedCore",
     "exposedJDBC",
+    "exposedKotlinDateTime"
 ]
 ktorClient = [
     "ktorClientCioJVM",
