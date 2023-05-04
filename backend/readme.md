@@ -8,7 +8,6 @@ Techstack fürs backend
 - Example route: http://localhost:8090/api/v1/hello
 
 # TODOS
-- Automatic gradle version handling 
 
 # Facts
 - Running on Port 8090
