@@ -10,11 +10,13 @@ import com.nw.plugins.configureSecurity
 import com.nw.plugins.configureSerialization
 import com.nw.routes.configureFilter
 import com.nw.routes.configureJobPosting
+import com.nw.routes.configureJobResult
 import com.nw.routes.configureJobSite
 import com.nw.routes.configureTechnology
 import com.nw.routes.configureUser
 import com.nw.utils.filterFacade
 import com.nw.utils.jobPostingFacade
+import com.nw.utils.jobResultFacade
 import com.nw.utils.jobSiteFacade
 import com.nw.utils.technologyFacade
 import com.nw.utils.userFacade
@@ -38,4 +40,5 @@ fun Application.module() {
     configureTechnology(technologyFacade)
     configureJobPosting(jobPostingFacade)
     configureJobSite(jobSiteFacade)
+    configureJobResult(jobResultFacade)
 }
