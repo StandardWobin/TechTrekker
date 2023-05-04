@@ -9,9 +9,11 @@ import com.nw.plugins.configureRouting
 import com.nw.plugins.configureSecurity
 import com.nw.plugins.configureSerialization
 import com.nw.routes.configureFilter
+import com.nw.routes.configureJobPosting
 import com.nw.routes.configureTechnology
 import com.nw.routes.configureUser
 import com.nw.utils.filterFacade
+import com.nw.utils.jobPostingFacade
 import com.nw.utils.technologyFacade
 import com.nw.utils.userFacade
 import io.ktor.server.application.Application
@@ -32,4 +34,5 @@ fun Application.module() {
     configureUser(userFacade)
     configureFilter(filterFacade)
     configureTechnology(technologyFacade)
+    configureJobPosting(jobPostingFacade)
 }
