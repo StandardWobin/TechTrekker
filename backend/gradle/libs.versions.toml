@@ -1,5 +1,6 @@
 [versions]
 exposedVersion = "0.41.1"
+hikariVersion = "5.0.1"
 kotlinVersion = "1.8.21"
 ktlintVersion = "11.3.2"
 ktorVersion = "2.3.0"
@@ -14,6 +15,7 @@ versionUpdateVersion = "0.46.0"
 exposedCore = { module = "org.jetbrains.exposed:exposed-core", version.ref = "exposedVersion" }
 exposedJDBC = { module = "org.jetbrains.exposed:exposed-jdbc", version.ref = "exposedVersion" }
 exposedKotlinDateTime = { module = "org.jetbrains.exposed:exposed-kotlin-datetime", version.ref = "exposedVersion" }
+hikariCP = { module = "com.zaxxer:HikariCP", version.ref = "hikariVersion" }
 kotlinTestJunit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlinVersion" }
 ktorClientCioJVM = { module = "io.ktor:ktor-client-cio-jvm", version.ref = "ktorVersion" }
 ktorClientContentNegotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktorVersion" }
@@ -45,8 +47,9 @@ cookies = [
     "ktorServerSessions",
 ]
 dbConnector = [
+    "hikariCP",
     "mysqlConnector",
-    "sshConnector",
+    "sshConnector"
 ]
 exposed = [
     "exposedCore",
