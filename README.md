@@ -43,5 +43,6 @@ dies ist ein Arbeitstitel. Das Frontend ist eine Responsive Webapp die Jobdaten 
 4. Where to host? (check https://fly.io - ionos, AWS lightsail?)
 5. Automatic releases (see semantic release)
 6. Set Env variables 
+7. Uptime Kuma for monitoring? https://github.com/louislam/uptime-kuma
 
 (c) 2023
