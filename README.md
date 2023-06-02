@@ -45,4 +45,7 @@ dies ist ein Arbeitstitel. Das Frontend ist eine Responsive Webapp die Jobdaten 
 6. Set Env variables 
 7. Uptime Kuma for monitoring? https://github.com/louislam/uptime-kuma
 
+### Documentation
+- Use this for documentation? https://docusaurus.io/docs
+
 (c) 2023
