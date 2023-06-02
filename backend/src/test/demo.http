@@ -1,0 +1,164 @@
+### Get all users
+GET http://localhost:8080/api/v1/users
+
+### Get user by ID
+GET http://localhost:8080/api/v1/users/1
+
+### Delete user by ID
+DELETE http://localhost:8080/api/v1/users/1
+
+### Register a new user
+POST http://localhost:8080/api/v1/users/register
+Content-Type: application/json
+
+{
+  "username": "john_doe",
+  "firstName": "John",
+  "lastName": "Doe"
+}
+
+### Edit user by ID
+PUT http://localhost:8080/api/v1/users/edit/1
+Content-Type: application/json
+
+{
+  "firstName": "Updated John",
+  "lastName": "Updated Doe"
+}
+
+### Get all technologies
+GET http://localhost:8080/api/v1/Technologies
+
+### Get technology by ID
+GET http://localhost:8080/api/v1/Technologies/1
+
+
+### Delete technology by ID
+DELETE http://localhost:8080/api/v1/Technologies/1
+
+### Add a new technology
+POST http://localhost:8080/api/v1/Technologies/add
+Content-Type: application/json
+
+{
+  "name": "Kotlin",
+  "description": "A modern programming language"
+}
+
+### Edit technology by ID
+PUT http://localhost:8080/api/v1/Technologies/1/edit
+Content-Type: application/json
+
+{
+  "name": "Updated Kotlin",
+  "description": "An updated description"
+}
+
+### Get all job sites
+GET http://localhost:8080/api/v1/jobSites
+
+### Get job site by ID
+GET http://localhost:8080/api/v1/jobSites/1
+
+### Delete job site by ID
+DELETE http://localhost:8080/api/v1/jobSites/1
+
+### Add a new job site
+POST http://localhost:8080/api/v1/jobSites/add
+Content-Type: application/json
+
+{
+  "name": "Example Job Site",
+  "location": "Example Location"
+}
+
+### Edit job site by ID
+PUT http://localhost:8080/api/v1/jobSites/1/edit
+Content-Type: application/json
+
+{
+  "name": "Updated Job Site",
+  "location": "Updated Location"
+}
+
+### Get all job results
+GET http://localhost:8080/api/v1/JobResults
+
+### Get job result by ID
+GET http://localhost:8080/api/v1/JobResults/1
+
+### Delete job result by ID
+DELETE http://localhost:8080/api/v1/JobResults/1
+
+### Add a new job result
+POST http://localhost:8080/api/v1/JobResults/add
+Content-Type: application/json
+
+{
+  "jobId": 123,
+  "status": "Success"
+}
+
+### Edit job result by ID
+PUT http://localhost:8080/api/v1/JobResults/1/edit
+Content-Type: application/json
+
+{
+  "jobId": 456,
+  "status": "Updated"
+}
+### Get all job postings
+GET http://localhost:8080/api/v1/JobPostings
+
+### Get job posting by ID
+GET http://localhost:8080/api/v1/JobPostings/1
+
+### Delete job posting by ID
+DELETE http://localhost:8080/api/v1/JobPostings/1
+
+### Add a new job posting
+POST http://localhost:8080/api/v1/JobPostings/add
+Content-Type: application/json
+
+{
+  "title": "Software Engineer",
+  "description": "Join our team as a software engineer.",
+  "location": "Example City"
+}
+
+### Edit job posting by ID
+PUT http://localhost:8080/api/v1/JobPostings/1/edit
+Content-Type: application/json
+
+{
+  "title": "Updated Software Engineer",
+  "description": "An updated job posting.",
+  "location": "Updated City"
+}
+
+### Get all filters
+GET http://localhost:8080/api/v1/filters
+
+### Get filter by ID
+GET http://localhost:8080/api/v1/filters/1
+
+### Delete filter by ID
+DELETE http://localhost:8080/api/v1/filters/1
+
+### Add a new filter
+POST http://localhost:8080/api/v1/filters/add
+Content-Type: application/json
+
+{
+  "name": "Technology",
+  "value": "Java"
+}
+
+### Edit filter by ID
+PUT http://localhost:8080/api/v1/filters/1/edit
+Content-Type: application/json
+
+{
+  "name": "Technology",
+  "value": "Kotlin"
+}
