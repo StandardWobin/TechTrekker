@@ -6,6 +6,7 @@ Techstack fürs backend
 - Install the dependencies: `./gradlew build`
 - Start the application by running: `./gradlew bootRun`
 - Example route: http://localhost:8090/api/v1/hello
+- Demo calls in `src/test/demo.http`
 
 # TODOS
 
