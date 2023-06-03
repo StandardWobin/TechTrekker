@@ -23,8 +23,12 @@
         name="OpenStreetMap"
       ></l-tile-layer>
 
-      <l-geo-json :geojson="geojson" :options="geojsonOptions" />
-    </l-map>
+      <!-- <l-image-overlay
+      id="imageOverlay"
+        :zIndex="10000"
+        @click="console.log('lala')"
+       url="de.png" :bounds="[[49, 8], [51, 9]]" ></l-image-overlay>
+    </l-map> -->
   </div>
 </template>
 
@@ -34,14 +38,15 @@ import { defineComponent } from 'vue';
 // DON'T load Leaflet components here!
 // Its CSS is needed though, if not imported elsewhere in your application.
 import 'leaflet/dist/leaflet.css';
-import { LMap, LGeoJson, LTileLayer } from '@vue-leaflet/vue-leaflet';
+import { LMap, LTileLayer, LImageOverlay } from '@vue-leaflet/vue-leaflet';
 
 export default defineComponent({
   name: 'LeaFletEndPoint',
+  emit: ["click"],
 
   components: {
     LMap,
-    LGeoJson,
+    LImageOverlay,
     LTileLayer,
   },
 
@@ -59,9 +64,15 @@ export default defineComponent({
     };
   },
 
+
+
+
   async beforeMount() {
     // HERE is where to load Leaflet components!
     const { circleMarker } = await import('leaflet/dist/leaflet-src.esm');
+
+
+
 
     // And now the Leaflet circleMarker function can be used by the options:
     this.geojsonOptions.pointToLayer = (feature, latLng) =>
