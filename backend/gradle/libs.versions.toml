@@ -2,7 +2,7 @@
 exposedVersion = "0.41.1"
 hikariVersion = "5.0.1"
 kotlinVersion = "1.8.21"
-ktlintVersion = "11.3.2"
+ktlintVersion = "11.4.0"
 ktorVersion = "2.3.1"
 logbackVersion = "1.4.7"
 mysqlConnectorVersion = "8.0.33"
@@ -98,5 +98,5 @@ catalogUpdate = { id = "nl.littlerobots.version-catalog-update", version.ref = "
 kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlinVersion" }
 kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlinVersion" }
 ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlintVersion" }
-ktorPlugin = "io.ktor.plugin:2.3.0"
+ktorPlugin = { id = "io.ktor.plugin", version.ref = "ktorVersion" }
 versionUpdate = { id = "com.github.ben-manes.versions", version.ref = "versionUpdateVersion" }
