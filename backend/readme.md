@@ -21,6 +21,17 @@ Techstack fürs backend
 ## Crawler 
 *teil vom anderen Server?, eigener Server?*
 
+## Love 4 The Systems
+
+We want to make sure to upgrade our systems every quarter (dependencies, libraries, etc pp)
+
+For updating there are 2 gradle tasks necessary:
+
+1.  `./gradlew versionCatalogUpdate --interactive`
+2.  `./gradlew versionCatalogApplyUpdates`
+
+How do we do that in detail? see [here](docs/Love4TheSystems.adoc).
+
 ## Data models suggestion
 
 **These models are definitely not final - please change!**
