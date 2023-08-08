@@ -27,8 +27,8 @@
       id="imageOverlay"
         :zIndex="10000"
         @click="console.log('lala')"
-       url="de.png" :bounds="[[49, 8], [51, 9]]" ></l-image-overlay>
-    </l-map> -->
+       url="de.png" :bounds="[[49, 8], [51, 9]]" ></l-image-overlay> -->
+    </l-map>
   </div>
 </template>
 
