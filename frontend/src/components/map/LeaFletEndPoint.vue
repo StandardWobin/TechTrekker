@@ -20,14 +20,14 @@
       <l-tile-layer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         layer-type="base"
-        name="OpenStreetMap"
+        name='OpenStreetMap'
       ></l-tile-layer>
 
       <!-- <l-image-overlay
       id="imageOverlay"
         :zIndex="10000"
         @click="console.log('lala')"
-       url="de.png" :bounds="[[49, 8], [51, 9]]" ></l-image-overlay> -->
+       url="de.png" :bounds="[[49, 8], [51, 9]]" ></l-image-overlay>-->
     </l-map>
   </div>
 </template>
@@ -38,7 +38,7 @@ import { defineComponent } from 'vue';
 // DON'T load Leaflet components here!
 // Its CSS is needed though, if not imported elsewhere in your application.
 import 'leaflet/dist/leaflet.css';
-import { LMap, LTileLayer, LImageOverlay } from '@vue-leaflet/vue-leaflet';
+import { LMap, LTileLayer } from '@vue-leaflet/vue-leaflet';
 
 export default defineComponent({
   name: 'LeaFletEndPoint',
@@ -46,8 +46,7 @@ export default defineComponent({
 
   components: {
     LMap,
-    LImageOverlay,
-    LTileLayer,
+    LTileLayer
   },
 
   data() {
