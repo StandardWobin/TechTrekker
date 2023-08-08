@@ -93,6 +93,15 @@ for targetWord in targetWords:
     y = json.loads(response.text)
 
     print("Anzahl der Stellenangebote ", len(y["stellenangebote"]))
+
+    stellenAngebote = y["stellenangebote"]
     print("Anzahl für ", targetWord)
+
+
+    for yy in enumerate(stellenAngebote):
+        print(yy)
+
+        input("next")
+
     print(y["maxErgebnisse"])
     input()
